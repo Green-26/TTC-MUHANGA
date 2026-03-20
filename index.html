@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTC Muhanga - Teacher Training College | Shyogwe, Rwanda</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Rwanda flag colors theme */
+        :root {
+            --rwanda-blue: #00A1DE;
+            --rwanda-yellow: #E5BE01;
+            --rwanda-green: #2E7D32;
+            --dark-blue: #0a2472;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--rwanda-blue) 0%, #0a2472 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .top-bar {
+            background-color: rgba(0,0,0,0.1);
+            padding: 0.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            border-bottom: 2px solid var(--rwanda-yellow);
+        }
+
+        .contact-info i {
+            margin-right: 0.5rem;
+            color: var(--rwanda-yellow);
+        }
+
+        .social-icons a {
+            color: var(--white);
+            margin-left: 1rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--rwanda-yellow);
+        }
+
+        nav {
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--rwanda-yellow);
+            border-bottom-color: var(--rwanda-yellow);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--rwanda-yellow);
+            color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--rwanda-yellow);
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--rwanda-green);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Quick Info Bar */
+        .quick-info {
+            background: linear-gradient(135deg, var(--rwanda-green) 0%, #1b5e20 100%);
+            color: var(--white);
+            padding: 2rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .info-item i {
+            font-size: 2.5rem;
+            color: var(--rwanda-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .info-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h3 {
+            font-size: 2.5rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .section-title .underline {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--rwanda-blue), var(--rwanda-yellow), var(--rwanda-green));
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h4 {
+            font-size: 1.8rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--light-gray);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .stat-item i {
+            font-size: 2.5rem;
+            color: var(--rwanda-blue);
+            margin-bottom: 1rem;
+        }
+
+        .stat-item .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--rwanda-green);
+        }
+
+        /* Programs Section - UPDATED with correct options */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .program-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+
+        .program-header {
+            background: linear-gradient(135deg, var(--rwanda-blue), var(--dark-blue));
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .program-header h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .program-header .program-code {
+            display: inline-block;
+            background-color: var(--rwanda-yellow);
+            color: #333;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .program-content {
+            padding: 1.5rem;
+        }
+
+        .program-details {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .program-details li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .program-details li i {
+            color: var(--rwanda-green);
+            margin-right: 0.5rem;
+        }
+
+        .program-badge {
+            display: inline-block;
+            background-color: var(--rwanda-green);
+            color: var(--white);
+            padding: 0.2rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Location Section */
+        .location-section {
+            background-color: var(--light-gray);
+        }
+
+        .location-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: var(--rwanda-blue);
+            margin-bottom: 1rem;
+        }
+
+        .info-card h5 {
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: var(--white);
+            padding: 3rem 5% 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--rwanda-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li i {
+            margin-right: 0.5rem;
+            color: var(--rwanda-blue);
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--rwanda-yellow);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .quick-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <i class="fas fa-map-marker-alt"></i> Shyogwe Sector, Muhanga District, Rwanda
+                <i class="fas fa-phone" style="margin-left: 1rem;"></i> +250 123 456 789
+                <i class="fas fa-envelope" style="margin-left: 1rem;"></i> info@ttcmuhanga.rw
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <nav>
+            <div class="logo">
+                <h1>TTC Muhanga</h1>
+                <p>Shaping Future Educators | Shyogwe, Rwanda</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Est. 2005 • Shyogwe, Muhanga</span>
+            <h2>Teacher Training College Muhanga</h2>
+            <p>Excellence in Teacher Education • Located in the Heart of Shyogwe Sector, Muhanga District</p>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Offering: ECLPE | LE | SME | SSE</p>
+            <a href="#programs" class="btn">Explore Our Programs</a>
+        </div>
+    </section>
+
+    <section class="quick-info">
+        <div class="info-item">
+            <i class="fas fa-map-marked-alt"></i>
+            <h4>Our Location</h4>
+            <p>Shyogwe Sector, Muhanga District<br>Southern Province, Rwanda</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-users"></i>
+            <h4>Student Community</h4>
+            <p>800+ Future Educators<br>Committed to Excellence</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-book-open"></i>
+            <h4>Programs Offered</h4>
+            <p>4 Specialized Options<br>ECLPE • LE • SME • SSE</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Academic Calendar</h4>
+            <p>2024 Intake Open<br>Apply Now</p>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <div class="section-title">
+            <h3>Welcome to TTC Muhanga</h3>
+            <div class="underline"></div>
+            <p style="margin-top: 1rem;">Excellence in Teacher Education Since 2005</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h4>Shaping the Future of Education in Rwanda</h4>
+                <p>Located in the serene Shyogwe sector of Muhanga district, TTC Muhanga stands as a beacon of quality teacher education in Rwanda's Southern Province. Our institution is dedicated to preparing competent, passionate, and innovative educators who will shape the next generation of Rwandan leaders.</p>
+                <p>We offer four specialized programs: <strong>ECLPE (Early Childhood and Lower Primary Education), LE (Languages Education), SME (Science and Mathematics Education), and SSE (Social Studies and Religious Education)</strong>. Each program is designed to meet Rwanda's Competence-Based Curriculum requirements.</p>
+                <a href="#" class="btn" style="margin-top: 1rem;">Read Our Story</a>
+            </div>
+            
+            <div class="about-stats">
+                <div class="stat-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="number">2500+</div>
+                    <p>Alumni</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="number">45+</div>
+                    <p>Qualified Lecturers</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-school"></i>
+                    <div class="number">120+</div>
+                    <p>Partner Schools</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-trophy"></i>
+                    <div class="number">98%</div>
+                    <p>Graduate Employment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="container" style="background-color: var(--light-gray); border-radius: 20px; padding: 4rem 5%;">
+        <div class="section-title">
+            <h3>Our Teacher Training Programs</h3>
+            <div class="underline"></div>
+            <p style="margin-top: 1rem;">Four Specialized Options Aligned with Rwanda's Competence-Based Curriculum</p>
+        </div>
+
+        <div class="programs-grid">
+            <!-- ECLPE - Early Childhood and Lower Primary Education -->
+            <div class="program-card">
+                <div class="program-header">
+                    <h4>ECLPE</h4>
+                    <span class="program-code">A1 Level</span>
+                </div>
+                <div class="program-content">
+                    <h5>Early Childhood and Lower Primary Education</h5>
+                    <p style="margin: 1rem 0; color: #666;">Specialized training for nursery and lower primary educators (P1-P3).</p>
+                    <ul class="program-details">
+                        <li><i class="fas fa-check-circle"></i> Child Development Psychology</li>
+                        <li><i class="fas fa-check-circle"></i> Play-Based Learning Methodologies</li>
+                        <li><i class="fas fa-check-circle"></i> Early Literacy & Numeracy</li>
+                        <li><i class="fas fa-check-circle"></i> Classroom Management</li>
+                        <li><i class="fas fa-check-circle"></i> Child Health & Nutrition</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="program-badge">3 Years</span>
+                        <span class="program-badge">Practicum Included</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LE - Languages Education -->
+            <div class="program-card">
+                <div class="program-header">
+                    <h4>LE</h4>
+                    <span class="program-code">A1 Level</span>
+                </div>
+                <div class="program-content">
+                    <h5>Languages Education</h5>
+                    <p style="margin: 1rem 0; color: #666;">Comprehensive training for language teachers (Kinyarwanda, English, French).</p>
+                    <ul class="program-details">
+                        <li><i class="fas fa-check-circle"></i> Linguistics & Phonetics</li>
+                        <li><i class="fas fa-check-circle"></i> Teaching Methodology</li>
+                        <li><i class="fas fa-check-circle"></i> Literature Studies</li>
+                        <li><i class="fas fa-check-circle"></i> Translation & Interpretation</li>
+                        <li><i class="fas fa-check-circle"></i> Language Assessment</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="program-badge">3 Years</span>
+                        <span class="program-badge">Language Labs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SME - Science and Mathematics Education -->
+            <div class="program-card">
+                <div class="program-header">
+                    <h4>SME</h4>
+                    <span class="program-code">A1 Level</span>
+                </div>
+                <div class="program-content">
+                    <h5>Science and Mathematics Education</h5>
+                    <p style="margin: 1rem 0; color: #666;">Focused training for mathematics and science teachers.</p>
+                    <ul class="program-details">
+                        <li><i class="fas fa-check-circle"></i> Mathematics & Statistics</li>
+                        <li><i class="fas fa-check-circle"></i> Physics & Chemistry</li>
+                        <li><i class="fas fa-check-circle"></i> Biology & Environmental Science</li>
+                        <li><i class="fas fa-check-circle"></i> ICT in Education</li>
+                        <li><i class="fas fa-check-circle"></i> Laboratory Management</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="program-badge">3 Years</span>
+                        <span class="program-badge">Lab Work</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SSE - Social Studies and Religious Education -->
+            <div class="program-card">
+                <div class="program-header">
+                    <h4>SSE</h4>
+                    <span class="program-code">A1 Level</span>
+                </div>
+                <div class="program-content">
+                    <h5>Social Studies and Religious Education</h5>
+                    <p style="margin: 1rem 0; color: #666;">Comprehensive training for social studies and religious education teachers.</p>
+                    <ul class="program-details">
+                        <li><i class="fas fa-check-circle"></i> History & Geography</li>
+                        <li><i class="fas fa-check-circle"></i> Civics & Ethics</li>
+                        <li><i class="fas fa-check-circle"></i> Religious Studies</li>
+                        <li><i class="fas fa-check-circle"></i> Entrepreneurship</li>
+                        <li><i class="fas fa-check-circle"></i> Peace & Values Education</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="program-badge">3 Years</span>
+                        <span class="program-badge">Field Studies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program Summary Table -->
+        <div style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 10px;">
+            <h4 style="text-align: center; color: var(--dark-blue); margin-bottom: 2rem;">Program Options at a Glance</h4>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+                <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
+                    <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">ECLPE</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Early Childhood & Lower Primary</p>
+                </div>
+                <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
+                    <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">LE</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Languages Education</p>
+                </div>
+                <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
+                    <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">SME</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Science & Mathematics</p>
+                </div>
+                <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
+                    <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">SSE</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Social Studies & Religious Ed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="location-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>Our Location: Shyogwe, Muhanga</h3>
+                <div class="underline"></div>
+                <p style="margin-top: 1rem;">Conveniently Located in the Heart of Rwanda's Southern Province</p>
+            </div>
+
+            <div class="location-info">
+                <div class="info-card">
+                    <i class="fas fa-map-pin"></i>
+                    <h5>Physical Address</h5>
+                    <p>TTC Muhanga<br>
+                    Shyogwe Sector, Muhanga District<br>
+                    Southern Province, Rwanda<br>
+                    P.O. Box 45, Muhanga</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-directions"></i>
+                    <h5>Getting Here</h5>
+                    <p>Located 5km from Muhanga town center<br>
+                    Accessible via the main Kigali-Huye highway<br>
+                    45 minutes from Kigali City<br>
+                    Regular bus services available</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-university"></i>
+                    <h5>Campus Facilities</h5>
+                    <p>Modern classrooms & libraries<br>
+                    Science laboratories (SME program)<br>
+                    Language labs (LE program)<br>
+                    Demonstration school (ECLPE practice)<br>
+                    Student accommodation</p>
+                </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div style="margin-top: 3rem; border-radius: 10px; overflow: hidden; height: 400px; background-color: #ddd; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(45deg, #ccc 25%, #ddd 25%, #ddd 50%, #ccc 50%, #ccc 75%, #ddd 75%, #ddd 100%); background-size: 40px 40px;">
+                <div style="background-color: rgba(255,255,255,0.9); padding: 2rem; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--rwanda-blue); margin-bottom: 1rem;"></i>
+                    <h4>TTC Muhanga Campus</h4>
+                    <p>Shyogwe Sector, Muhanga District, Rwanda</p>
+                    <a href="#" class="btn" style="margin-top: 1rem;">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="admissions" class="container">
+        <div class="section-title">
+            <h3>Admissions 2024</h3>
+            <div class="underline"></div>
+            <p style="margin-top: 1rem;">Join TTC Muhanga - Choose Your Specialization</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div class="info-card" style="text-align: center;">
+                <i class="fas fa-child" style="font-size: 2.5rem;"></i>
+                <h5>ECLPE</h5>
+                <p><strong>Entry Requirements:</strong> Completed Secondary School with passion for early childhood education</p>
+            </div>
+            <div class="info-card" style="text-align: center;">
+                <i class="fas fa-language" style="font-size: 2.5rem;"></i>
+                <h5>LE</h5>
+                <p><strong>Entry Requirements:</strong> Strong performance in Languages, interest in multilingual education</p>
+            </div>
+            <div class="info-card" style="text-align: center;">
+                <i class="fas fa-flask" style="font-size: 2.5rem;"></i>
+                <h5>SME</h5>
+                <p><strong>Entry Requirements:</strong> Strong background in Sciences and Mathematics</p>
+            </div>
+            <div class="info-card" style="text-align: center;">
+                <i class="fas fa-globe-africa" style="font-size: 2.5rem;"></i>
+                <h5>SSE</h5>
+                <p><strong>Entry Requirements:</strong> Interest in Social Sciences, History, and Religious Studies</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#" class="btn">Apply Online Now</a>
+            <a href="#" class="btn" style="background-color: var(--rwanda-green); color: white; margin-left: 1rem;">Download Application Form</a>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <div class="section-title">
+            <h3>Get In Touch</h3>
+            <div class="underline"></div>
+            <p style="margin-top: 1rem;">Questions About Our Programs? We're Here to Help</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div class="info-card">
+                <i class="fas fa-phone-alt"></i>
+                <h5>Call Us</h5>
+                <p><strong>ECLPE Coordinator:</strong> +250 788 123 456<br>
+                <strong>LE Coordinator:</strong> +250 788 123 457<br>
+                <strong>SME Coordinator:</strong> +250 788 123 458<br>
+                <strong>SSE Coordinator:</strong> +250 788 123 459</p>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h5>Email Us</h5>
+                <p>General Inquiries: info@ttcmuhanga.rw<br>
+                Admissions: admissions@ttcmuhanga.rw<br>
+                ECLPE: eclpe@ttcmuhanga.rw<br>
+                LE: le@ttcmuhanga.rw<br>
+                SME: sme@ttcmuhanga.rw<br>
+                SSE: sse@ttcmuhanga.rw</p>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h5>Office Hours</h5>
+                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
+                Saturday: 9:00 AM - 12:00 PM<br>
+                Sunday: Closed<br>
+                Program-specific advising available</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>TTC Muhanga</h4>
+                <p>Shaping Future Educators in the Heart of Muhanga District, Rwanda. Offering ECLPE, LE, SME, and SSE programs since 2005.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Our Programs</h4>
+                <ul>
+                    <li><a href="#">ECLPE - Early Childhood</a></li>
+                    <li><a href="#">LE - Languages Education</a></li>
+                    <li><a href="#">SME - Science & Math</a></li>
+                    <li><a href="#">SSE - Social Studies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">Alumni</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +250 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@ttcmuhanga.rw</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Shyogwe, Muhanga, Rwanda</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2024 TTC Muhanga. All rights reserved. | Shyogwe Sector, Muhanga District, Rwanda</p>
+            <p style="margin-top: 0.5rem;">Programs: ECLPE | LE | SME | SSE</p>
+        </div>
+    </footer>
+</body>
+</html>
