@@ -330,6 +330,27 @@
             margin-right: 0.5rem;
         }
 
+        /* REB Placement Notice */
+        .reb-notice {
+            background: linear-gradient(135deg, #fff3e0, #ffe6cc);
+            border-left: 5px solid var(--rwanda-yellow);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .reb-notice i {
+            color: var(--rwanda-yellow);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .reb-notice h4 {
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
+
         /* Location Section */
         .location-section {
             background-color: var(--light-gray);
@@ -454,7 +475,7 @@
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#programs">Programs</a></li>
-                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#placement">Placement</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -488,9 +509,9 @@
             <p>4 Specialized Options<br>ECLPE • LE • SME • SSE</p>
         </div>
         <div class="info-item">
-            <i class="fas fa-calendar-alt"></i>
-            <h4>Academic Calendar</h4>
-            <p>2024 Intake Open<br>Apply Now</p>
+            <i class="fas fa-chalkboard-user"></i>
+            <h4>Training Focus</h4>
+            <p>Competence-Based<br>Curriculum</p>
         </div>
     </section>
 
@@ -506,7 +527,7 @@
                 <h4>Shaping the Future of Education in Rwanda</h4>
                 <p>Located in the serene Shyogwe sector of Muhanga district, TTC Muhanga stands as a beacon of quality teacher education in Rwanda's Southern Province. Our institution is dedicated to preparing competent, passionate, and innovative educators who will shape the next generation of Rwandan leaders.</p>
                 <p>We offer four specialized programs: <strong>ECLPE (Early Childhood and Lower Primary Education), LE (Languages Education), SME (Science and Mathematics Education), and SSE (Social Studies and Religious Education)</strong>. Each program is designed to meet Rwanda's Competence-Based Curriculum requirements.</p>
-                <a href="#" class="btn" style="margin-top: 1rem;">Read Our Story</a>
+                <a href="#programs" class="btn" style="margin-top: 1rem;">View Our Programs</a>
             </div>
             
             <div class="about-stats">
@@ -516,7 +537,7 @@
                     <p>Alumni</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-chalkboard-teacher"></i>
+                    <i class="fas fa-chalkboard-user"></i>
                     <div class="number">45+</div>
                     <p>Qualified Lecturers</p>
                 </div>
@@ -659,6 +680,55 @@
         </div>
     </section>
 
+    <!-- REB PLACEMENT SECTION - Replaced Admissions -->
+    <section id="placement" class="container">
+        <div class="section-title">
+            <h3>Student Placement</h3>
+            <div class="underline"></div>
+            <p style="margin-top: 1rem;">Official REB Placement Process</p>
+        </div>
+
+        <div class="reb-notice">
+            <i class="fas fa-building-columns"></i>
+            <h4>Important Notice: REB Placement Only</h4>
+            <p style="font-size: 1.1rem;">TTC Muhanga does NOT accept direct applications. All students are placed by the <strong>Rwanda Education Board (REB)</strong> through the official national placement system.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div class="info-card" style="text-align: center;">
+                <i class="fas fa-chalkboard-user" style="font-size: 2.5rem;"></i>
+                <h5>ECLPE Placement</h5>
+                <p>Students interested in Early Childhood & Lower Primary Education are placed by REB based on their O-Level results and career preferences.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: O-Level with interest in child development</p>
+            </div>
+            <div class="info-card" style="text-align: center;">
+                <i class="fas fa-language" style="font-size: 2.5rem;"></i>
+                <h5>LE Placement</h5>
+                <p>Languages Education candidates are selected by REB based on language performance and national placement criteria.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Strong performance in Languages</p>
+            </div>
+            <div class="info-card" style="text-align: center;">
+                <i class="fas fa-flask" style="font-size: 2.5rem;"></i>
+                <h5>SME Placement</h5>
+                <p>Science & Mathematics candidates are placed by REB based on strong performance in Sciences and Mathematics.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Good grades in Sciences & Mathematics</p>
+            </div>
+            <div class="info-card" style="text-align: center;">
+                <i class="fas fa-globe-africa" style="font-size: 2.5rem;"></i>
+                <h5>SSE Placement</h5>
+                <p>Social Studies & Religious Education candidates are placed by REB based on performance in Humanities and Social Sciences.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Interest in Social Sciences & History</p>
+            </div>
+        </div>
+
+        <div style="background: linear-gradient(135deg, var(--rwanda-blue), var(--dark-blue)); color: white; padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
+            <i class="fas fa-envelope-open-text" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+            <h4>Placed Students - Welcome!</h4>
+            <p>If you have been placed by REB to TTC Muhanga, please contact our administration for enrollment information and reporting dates.</p>
+            <p style="margin-top: 1rem;"><i class="fas fa-phone"></i> +250 123 456 789 | <i class="fas fa-envelope"></i> info@ttcmuhanga.rw</p>
+        </div>
+    </section>
+
     <section id="location" class="location-section">
         <div class="container">
             <div class="section-title">
@@ -706,42 +776,6 @@
                     <a href="#" class="btn" style="margin-top: 1rem;">Get Directions</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="admissions" class="container">
-        <div class="section-title">
-            <h3>Admissions 2024</h3>
-            <div class="underline"></div>
-            <p style="margin-top: 1rem;">Join TTC Muhanga - Choose Your Specialization</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-            <div class="info-card" style="text-align: center;">
-                <i class="fas fa-child" style="font-size: 2.5rem;"></i>
-                <h5>ECLPE</h5>
-                <p><strong>Entry Requirements:</strong> Completed Secondary School with passion for early childhood education</p>
-            </div>
-            <div class="info-card" style="text-align: center;">
-                <i class="fas fa-language" style="font-size: 2.5rem;"></i>
-                <h5>LE</h5>
-                <p><strong>Entry Requirements:</strong> Strong performance in Languages, interest in multilingual education</p>
-            </div>
-            <div class="info-card" style="text-align: center;">
-                <i class="fas fa-flask" style="font-size: 2.5rem;"></i>
-                <h5>SME</h5>
-                <p><strong>Entry Requirements:</strong> Strong background in Sciences and Mathematics</p>
-            </div>
-            <div class="info-card" style="text-align: center;">
-                <i class="fas fa-globe-africa" style="font-size: 2.5rem;"></i>
-                <h5>SSE</h5>
-                <p><strong>Entry Requirements:</strong> Interest in Social Sciences, History, and Religious Studies</p>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="#" class="btn">Apply Online Now</a>
-            <a href="#" class="btn" style="background-color: var(--rwanda-green); color: white; margin-left: 1rem;">Download Application Form</a>
         </div>
     </section>
 
@@ -805,7 +839,7 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#admissions">Admissions</a></li>
+                    <li><a href="#placement">REB Placement</a></li>
                     <li><a href="#">Student Portal</a></li>
                     <li><a href="#">Alumni</a></li>
                 </ul>
@@ -823,7 +857,7 @@
 
         <div class="copyright">
             <p>&copy; 2024 TTC Muhanga. All rights reserved. | Shyogwe Sector, Muhanga District, Rwanda</p>
-            <p style="margin-top: 0.5rem;">Programs: ECLPE | LE | SME | SSE</p>
+            <p style="margin-top: 0.5rem;">Programs: ECLPE | LE | SME | SSE | Placed by REB</p>
         </div>
     </footer>
 </body>
