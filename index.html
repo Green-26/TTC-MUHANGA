@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TTC Muhanga - Teacher Training College in Shyogwe, Muhanga District, Rwanda. Offering ECLPE, LE, SME, and SSE programs. REB placement only.">
+    <meta name="keywords" content="TTC Muhanga, Teacher Training College, Shyogwe, Muhanga, Rwanda, ECLPE, LE, SME, SSE, REB placement">
+    <meta name="author" content="TTC Muhanga">
     <title>TTC Muhanga - Teacher Training College | Shyogwe, Rwanda</title>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -22,28 +25,42 @@
             --dark-blue: #0a2472;
             --light-gray: #f4f4f4;
             --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 12px 20px rgba(0,0,0,0.15);
         }
 
         body {
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden;
         }
 
         /* Header & Navigation */
         header {
             background: linear-gradient(135deg, var(--rwanda-blue) 0%, #0a2472 100%);
             color: var(--white);
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .top-bar {
-            background-color: rgba(0,0,0,0.1);
+            background-color: rgba(0,0,0,0.2);
             padding: 0.5rem 5%;
             display: flex;
             justify-content: space-between;
-            font-size: 0.9rem;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
             border-bottom: 2px solid var(--rwanda-yellow);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .contact-info i {
@@ -54,11 +71,13 @@
         .social-icons a {
             color: var(--white);
             margin-left: 1rem;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            display: inline-block;
         }
 
         .social-icons a:hover {
             color: var(--rwanda-yellow);
+            transform: translateY(-2px);
         }
 
         nav {
@@ -66,6 +85,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .logo h1 {
@@ -74,30 +95,42 @@
         }
 
         .logo p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             opacity: 0.9;
+        }
+
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--white);
+            transition: color 0.3s;
+        }
+
+        .menu-toggle:hover {
+            color: var(--rwanda-yellow);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
+            gap: 2rem;
         }
 
-        .nav-links li {
-            margin-left: 2rem;
-        }
-
-        .nav-links a {
+        .nav-links li a {
             color: var(--white);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: all 0.3s;
             padding-bottom: 0.3rem;
             border-bottom: 2px solid transparent;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
+        .nav-links li a:hover,
+        .nav-links li a.active {
             color: var(--rwanda-yellow);
             border-bottom-color: var(--rwanda-yellow);
         }
@@ -107,27 +140,27 @@
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
-            height: 500px;
+            min-height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: var(--white);
+            padding: 4rem 1rem;
         }
 
         .hero-content {
             max-width: 900px;
-            padding: 2rem;
         }
 
         .hero h2 {
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 5vw, 3rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             margin-bottom: 2rem;
         }
 
@@ -143,7 +176,7 @@
 
         .btn {
             display: inline-block;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.8rem;
             background-color: var(--rwanda-yellow);
             color: #333;
             text-decoration: none;
@@ -152,13 +185,25 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
+            font-size: 1rem;
         }
 
         .btn:hover {
             background-color: var(--rwanda-green);
             color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--rwanda-yellow);
+            color: var(--rwanda-yellow);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--rwanda-yellow);
+            color: #333;
         }
 
         /* Quick Info Bar */
@@ -170,6 +215,15 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             text-align: center;
+        }
+
+        .info-item {
+            padding: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
         }
 
         .info-item i {
@@ -196,7 +250,7 @@
         }
 
         .section-title h3 {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             color: var(--dark-blue);
             margin-bottom: 1rem;
         }
@@ -206,6 +260,7 @@
             height: 3px;
             background: linear-gradient(90deg, var(--rwanda-blue), var(--rwanda-yellow), var(--rwanda-green));
             margin: 0 auto;
+            border-radius: 3px;
         }
 
         /* About Section */
@@ -229,20 +284,21 @@
         .about-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .stat-item {
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             background-color: var(--light-gray);
             border-radius: 10px;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            cursor: default;
         }
 
         .stat-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
         }
 
         .stat-item i {
@@ -252,15 +308,19 @@
         }
 
         .stat-item .number {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: var(--rwanda-green);
         }
 
-        /* Programs Section - UPDATED with correct options */
+        /* Programs Section */
+        .programs-section {
+            background-color: var(--light-gray);
+        }
+
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -269,14 +329,16 @@
             background: var(--white);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            border: 1px solid #eee;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .program-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+            box-shadow: var(--shadow-hover);
         }
 
         .program-header {
@@ -298,11 +360,18 @@
             padding: 0.3rem 1rem;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .program-content {
             padding: 1.5rem;
+            flex: 1;
+        }
+
+        .program-content h5 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--dark-blue);
         }
 
         .program-details {
@@ -328,13 +397,14 @@
             border-radius: 50px;
             font-size: 0.8rem;
             margin-right: 0.5rem;
+            margin-top: 0.5rem;
         }
 
         /* REB Placement Notice */
         .reb-notice {
             background: linear-gradient(135deg, #fff3e0, #ffe6cc);
             border-left: 5px solid var(--rwanda-yellow);
-            padding: 1.5rem;
+            padding: 1.8rem;
             border-radius: 10px;
             margin-bottom: 2rem;
             text-align: center;
@@ -349,6 +419,50 @@
         .reb-notice h4 {
             color: var(--dark-blue);
             margin-bottom: 0.5rem;
+        }
+
+        /* Placement Cards */
+        .placement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .placement-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .placement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .placement-card i {
+            font-size: 2.5rem;
+            color: var(--rwanda-blue);
+            margin-bottom: 1rem;
+        }
+
+        .placement-card h5 {
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Welcome Banner for Placed Students */
+        .welcome-banner {
+            background: linear-gradient(135deg, var(--rwanda-blue), var(--dark-blue));
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            text-align: center;
         }
 
         /* Location Section */
@@ -366,7 +480,13 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
 
         .info-card i {
@@ -378,6 +498,51 @@
         .info-card h5 {
             font-size: 1.2rem;
             color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Map Container */
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 400px;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ccc 25%, #ddd 25%, #ddd 50%, #ccc 50%, #ccc 75%, #ddd 75%, #ddd 100%);
+            background-size: 30px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .map-card {
+            background-color: rgba(255,255,255,0.95);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            margin: 1rem;
+        }
+
+        /* Contact Section - No contact details */
+        .contact-placeholder {
+            background: linear-gradient(135deg, var(--light-gray), #fff);
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-placeholder i {
+            font-size: 3rem;
+            color: var(--rwanda-blue);
             margin-bottom: 1rem;
         }
 
@@ -411,6 +576,7 @@
         .footer-section ul li i {
             margin-right: 0.5rem;
             color: var(--rwanda-blue);
+            width: 20px;
         }
 
         .footer-section a {
@@ -431,22 +597,112 @@
             color: #888;
         }
 
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--rwanda-blue);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            box-shadow: var(--shadow);
+            z-index: 999;
+            border: none;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--rwanda-green);
+            transform: translateY(-3px);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
             }
             
-            .hero h2 {
-                font-size: 2rem;
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+            
+            .nav-links.active {
+                display: flex;
             }
             
             .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .programs-grid {
                 grid-template-columns: 1fr;
             }
             
             .quick-info {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .hero {
+                min-height: 400px;
+            }
+            
+            .section-title h3 {
+                font-size: 1.8rem;
+            }
+            
+            .program-summary {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .program-summary {
+                grid-template-columns: 1fr !important;
+            }
+            
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .stat-item .number {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -455,15 +711,13 @@
     <header>
         <div class="top-bar">
             <div class="contact-info">
-                <i class="fas fa-map-marker-alt"></i> Shyogwe Sector, Muhanga District, Rwanda
-                <i class="fas fa-phone" style="margin-left: 1rem;"></i> +250 123 456 789
-                <i class="fas fa-envelope" style="margin-left: 1rem;"></i> info@ttcmuhanga.rw
+                <span><i class="fas fa-map-marker-alt"></i> Shyogwe Sector, Muhanga District, Rwanda</span>
             </div>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
         <nav>
@@ -471,6 +725,9 @@
                 <h1>TTC Muhanga</h1>
                 <p>Shaping Future Educators | Shyogwe, Rwanda</p>
             </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -555,132 +812,134 @@
         </div>
     </section>
 
-    <section id="programs" class="container" style="background-color: var(--light-gray); border-radius: 20px; padding: 4rem 5%;">
-        <div class="section-title">
-            <h3>Our Teacher Training Programs</h3>
-            <div class="underline"></div>
-            <p style="margin-top: 1rem;">Four Specialized Options Aligned with Rwanda's Competence-Based Curriculum</p>
-        </div>
+    <section id="programs" class="programs-section">
+        <div class="container">
+            <div class="section-title">
+                <h3>Our Teacher Training Programs</h3>
+                <div class="underline"></div>
+                <p style="margin-top: 1rem;">Four Specialized Options Aligned with Rwanda's Competence-Based Curriculum</p>
+            </div>
 
-        <div class="programs-grid">
-            <!-- ECLPE - Early Childhood and Lower Primary Education -->
-            <div class="program-card">
-                <div class="program-header">
-                    <h4>ECLPE</h4>
-                    <span class="program-code">A1 Level</span>
+            <div class="programs-grid">
+                <!-- ECLPE - Early Childhood and Lower Primary Education -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h4>ECLPE</h4>
+                        <span class="program-code">A1 Level</span>
+                    </div>
+                    <div class="program-content">
+                        <h5>Early Childhood and Lower Primary Education</h5>
+                        <p style="margin: 1rem 0; color: #666;">Specialized training for nursery and lower primary educators (P1-P3).</p>
+                        <ul class="program-details">
+                            <li><i class="fas fa-check-circle"></i> Child Development Psychology</li>
+                            <li><i class="fas fa-check-circle"></i> Play-Based Learning Methodologies</li>
+                            <li><i class="fas fa-check-circle"></i> Early Literacy & Numeracy</li>
+                            <li><i class="fas fa-check-circle"></i> Classroom Management</li>
+                            <li><i class="fas fa-check-circle"></i> Child Health & Nutrition</li>
+                        </ul>
+                        <div>
+                            <span class="program-badge">3 Years</span>
+                            <span class="program-badge">Practicum Included</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="program-content">
-                    <h5>Early Childhood and Lower Primary Education</h5>
-                    <p style="margin: 1rem 0; color: #666;">Specialized training for nursery and lower primary educators (P1-P3).</p>
-                    <ul class="program-details">
-                        <li><i class="fas fa-check-circle"></i> Child Development Psychology</li>
-                        <li><i class="fas fa-check-circle"></i> Play-Based Learning Methodologies</li>
-                        <li><i class="fas fa-check-circle"></i> Early Literacy & Numeracy</li>
-                        <li><i class="fas fa-check-circle"></i> Classroom Management</li>
-                        <li><i class="fas fa-check-circle"></i> Child Health & Nutrition</li>
-                    </ul>
-                    <div style="margin-top: 1.5rem;">
-                        <span class="program-badge">3 Years</span>
-                        <span class="program-badge">Practicum Included</span>
+
+                <!-- LE - Languages Education -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h4>LE</h4>
+                        <span class="program-code">A1 Level</span>
+                    </div>
+                    <div class="program-content">
+                        <h5>Languages Education</h5>
+                        <p style="margin: 1rem 0; color: #666;">Comprehensive training for language teachers (Kinyarwanda, English, French).</p>
+                        <ul class="program-details">
+                            <li><i class="fas fa-check-circle"></i> Linguistics & Phonetics</li>
+                            <li><i class="fas fa-check-circle"></i> Teaching Methodology</li>
+                            <li><i class="fas fa-check-circle"></i> Literature Studies</li>
+                            <li><i class="fas fa-check-circle"></i> Translation & Interpretation</li>
+                            <li><i class="fas fa-check-circle"></i> Language Assessment</li>
+                        </ul>
+                        <div>
+                            <span class="program-badge">3 Years</span>
+                            <span class="program-badge">Language Labs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SME - Science and Mathematics Education -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h4>SME</h4>
+                        <span class="program-code">A1 Level</span>
+                    </div>
+                    <div class="program-content">
+                        <h5>Science and Mathematics Education</h5>
+                        <p style="margin: 1rem 0; color: #666;">Focused training for mathematics and science teachers.</p>
+                        <ul class="program-details">
+                            <li><i class="fas fa-check-circle"></i> Mathematics & Statistics</li>
+                            <li><i class="fas fa-check-circle"></i> Physics & Chemistry</li>
+                            <li><i class="fas fa-check-circle"></i> Biology & Environmental Science</li>
+                            <li><i class="fas fa-check-circle"></i> ICT in Education</li>
+                            <li><i class="fas fa-check-circle"></i> Laboratory Management</li>
+                        </ul>
+                        <div>
+                            <span class="program-badge">3 Years</span>
+                            <span class="program-badge">Lab Work</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SSE - Social Studies and Religious Education -->
+                <div class="program-card">
+                    <div class="program-header">
+                        <h4>SSE</h4>
+                        <span class="program-code">A1 Level</span>
+                    </div>
+                    <div class="program-content">
+                        <h5>Social Studies and Religious Education</h5>
+                        <p style="margin: 1rem 0; color: #666;">Comprehensive training for social studies and religious education teachers.</p>
+                        <ul class="program-details">
+                            <li><i class="fas fa-check-circle"></i> History & Geography</li>
+                            <li><i class="fas fa-check-circle"></i> Civics & Ethics</li>
+                            <li><i class="fas fa-check-circle"></i> Religious Studies</li>
+                            <li><i class="fas fa-check-circle"></i> Entrepreneurship</li>
+                            <li><i class="fas fa-check-circle"></i> Peace & Values Education</li>
+                        </ul>
+                        <div>
+                            <span class="program-badge">3 Years</span>
+                            <span class="program-badge">Field Studies</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- LE - Languages Education -->
-            <div class="program-card">
-                <div class="program-header">
-                    <h4>LE</h4>
-                    <span class="program-code">A1 Level</span>
-                </div>
-                <div class="program-content">
-                    <h5>Languages Education</h5>
-                    <p style="margin: 1rem 0; color: #666;">Comprehensive training for language teachers (Kinyarwanda, English, French).</p>
-                    <ul class="program-details">
-                        <li><i class="fas fa-check-circle"></i> Linguistics & Phonetics</li>
-                        <li><i class="fas fa-check-circle"></i> Teaching Methodology</li>
-                        <li><i class="fas fa-check-circle"></i> Literature Studies</li>
-                        <li><i class="fas fa-check-circle"></i> Translation & Interpretation</li>
-                        <li><i class="fas fa-check-circle"></i> Language Assessment</li>
-                    </ul>
-                    <div style="margin-top: 1.5rem;">
-                        <span class="program-badge">3 Years</span>
-                        <span class="program-badge">Language Labs</span>
+            <!-- Program Summary Table -->
+            <div style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow);">
+                <h4 style="text-align: center; color: var(--dark-blue); margin-bottom: 2rem;">Program Options at a Glance</h4>
+                <div class="program-summary" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+                    <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
+                        <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">ECLPE</strong>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Early Childhood & Lower Primary</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- SME - Science and Mathematics Education -->
-            <div class="program-card">
-                <div class="program-header">
-                    <h4>SME</h4>
-                    <span class="program-code">A1 Level</span>
-                </div>
-                <div class="program-content">
-                    <h5>Science and Mathematics Education</h5>
-                    <p style="margin: 1rem 0; color: #666;">Focused training for mathematics and science teachers.</p>
-                    <ul class="program-details">
-                        <li><i class="fas fa-check-circle"></i> Mathematics & Statistics</li>
-                        <li><i class="fas fa-check-circle"></i> Physics & Chemistry</li>
-                        <li><i class="fas fa-check-circle"></i> Biology & Environmental Science</li>
-                        <li><i class="fas fa-check-circle"></i> ICT in Education</li>
-                        <li><i class="fas fa-check-circle"></i> Laboratory Management</li>
-                    </ul>
-                    <div style="margin-top: 1.5rem;">
-                        <span class="program-badge">3 Years</span>
-                        <span class="program-badge">Lab Work</span>
+                    <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
+                        <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">LE</strong>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Languages Education</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- SSE - Social Studies and Religious Education -->
-            <div class="program-card">
-                <div class="program-header">
-                    <h4>SSE</h4>
-                    <span class="program-code">A1 Level</span>
-                </div>
-                <div class="program-content">
-                    <h5>Social Studies and Religious Education</h5>
-                    <p style="margin: 1rem 0; color: #666;">Comprehensive training for social studies and religious education teachers.</p>
-                    <ul class="program-details">
-                        <li><i class="fas fa-check-circle"></i> History & Geography</li>
-                        <li><i class="fas fa-check-circle"></i> Civics & Ethics</li>
-                        <li><i class="fas fa-check-circle"></i> Religious Studies</li>
-                        <li><i class="fas fa-check-circle"></i> Entrepreneurship</li>
-                        <li><i class="fas fa-check-circle"></i> Peace & Values Education</li>
-                    </ul>
-                    <div style="margin-top: 1.5rem;">
-                        <span class="program-badge">3 Years</span>
-                        <span class="program-badge">Field Studies</span>
+                    <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
+                        <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">SME</strong>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Science & Mathematics</p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Program Summary Table -->
-        <div style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 10px;">
-            <h4 style="text-align: center; color: var(--dark-blue); margin-bottom: 2rem;">Program Options at a Glance</h4>
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
-                <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
-                    <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">ECLPE</strong>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Early Childhood & Lower Primary</p>
-                </div>
-                <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
-                    <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">LE</strong>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Languages Education</p>
-                </div>
-                <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
-                    <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">SME</strong>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Science & Mathematics</p>
-                </div>
-                <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
-                    <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">SSE</strong>
-                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Social Studies & Religious Ed</p>
+                    <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
+                        <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">SSE</strong>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Social Studies & Religious Ed</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- REB PLACEMENT SECTION - Replaced Admissions -->
+    <!-- REB PLACEMENT SECTION -->
     <section id="placement" class="container">
         <div class="section-title">
             <h3>Student Placement</h3>
@@ -694,38 +953,38 @@
             <p style="font-size: 1.1rem;">TTC Muhanga does NOT accept direct applications. All students are placed by the <strong>Rwanda Education Board (REB)</strong> through the official national placement system.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-            <div class="info-card" style="text-align: center;">
-                <i class="fas fa-chalkboard-user" style="font-size: 2.5rem;"></i>
+        <div class="placement-grid">
+            <div class="placement-card">
+                <i class="fas fa-chalkboard-user"></i>
                 <h5>ECLPE Placement</h5>
                 <p>Students interested in Early Childhood & Lower Primary Education are placed by REB based on their O-Level results and career preferences.</p>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: O-Level with interest in child development</p>
             </div>
-            <div class="info-card" style="text-align: center;">
-                <i class="fas fa-language" style="font-size: 2.5rem;"></i>
+            <div class="placement-card">
+                <i class="fas fa-language"></i>
                 <h5>LE Placement</h5>
                 <p>Languages Education candidates are selected by REB based on language performance and national placement criteria.</p>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Strong performance in Languages</p>
             </div>
-            <div class="info-card" style="text-align: center;">
-                <i class="fas fa-flask" style="font-size: 2.5rem;"></i>
+            <div class="placement-card">
+                <i class="fas fa-flask"></i>
                 <h5>SME Placement</h5>
                 <p>Science & Mathematics candidates are placed by REB based on strong performance in Sciences and Mathematics.</p>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Good grades in Sciences & Mathematics</p>
             </div>
-            <div class="info-card" style="text-align: center;">
-                <i class="fas fa-globe-africa" style="font-size: 2.5rem;"></i>
+            <div class="placement-card">
+                <i class="fas fa-globe-africa"></i>
                 <h5>SSE Placement</h5>
                 <p>Social Studies & Religious Education candidates are placed by REB based on performance in Humanities and Social Sciences.</p>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Interest in Social Sciences & History</p>
             </div>
         </div>
 
-        <div style="background: linear-gradient(135deg, var(--rwanda-blue), var(--dark-blue)); color: white; padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
-            <i class="fas fa-envelope-open-text" style="font-size: 2rem; margin-bottom: 1rem;"></i>
-            <h4>Placed Students - Welcome!</h4>
+        <div class="welcome-banner">
+            <i class="fas fa-envelope-open-text" style="font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
+            <h4>Placed Students - Welcome to TTC Muhanga!</h4>
             <p>If you have been placed by REB to TTC Muhanga, please contact our administration for enrollment information and reporting dates.</p>
-            <p style="margin-top: 1rem;"><i class="fas fa-phone"></i> +250 123 456 789 | <i class="fas fa-envelope"></i> info@ttcmuhanga.rw</p>
+            <p style="margin-top: 1rem;"><i class="fas fa-building"></i> Visit our campus in Shyogwe for more information</p>
         </div>
     </section>
 
@@ -767,13 +1026,16 @@
                 </div>
             </div>
 
-            <!-- Map Placeholder -->
-            <div style="margin-top: 3rem; border-radius: 10px; overflow: hidden; height: 400px; background-color: #ddd; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(45deg, #ccc 25%, #ddd 25%, #ddd 50%, #ccc 50%, #ccc 75%, #ddd 75%, #ddd 100%); background-size: 40px 40px;">
-                <div style="background-color: rgba(255,255,255,0.9); padding: 2rem; border-radius: 10px; text-align: center;">
-                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--rwanda-blue); margin-bottom: 1rem;"></i>
-                    <h4>TTC Muhanga Campus</h4>
-                    <p>Shyogwe Sector, Muhanga District, Rwanda</p>
-                    <a href="#" class="btn" style="margin-top: 1rem;">Get Directions</a>
+            <!-- Interactive Map Container -->
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-card">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--rwanda-blue); margin-bottom: 1rem;"></i>
+                        <h4>TTC Muhanga Campus</h4>
+                        <p>Shyogwe Sector, Muhanga District, Rwanda</p>
+                        <p><strong>Coordinates:</strong> 2.080° S, 29.760° E</p>
+                        <a href="https://maps.google.com/?q=Shyogwe+Muhanga+Rwanda" target="_blank" rel="noopener noreferrer" class="btn" style="margin-top: 1rem;">Open in Google Maps</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -783,37 +1045,18 @@
         <div class="section-title">
             <h3>Get In Touch</h3>
             <div class="underline"></div>
-            <p style="margin-top: 1rem;">Questions About Our Programs? We're Here to Help</p>
+            <p style="margin-top: 1rem;">Visit Us at Our Campus</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-            <div class="info-card">
-                <i class="fas fa-phone-alt"></i>
-                <h5>Call Us</h5>
-                <p><strong>ECLPE Coordinator:</strong> +250 788 123 456<br>
-                <strong>LE Coordinator:</strong> +250 788 123 457<br>
-                <strong>SME Coordinator:</strong> +250 788 123 458<br>
-                <strong>SSE Coordinator:</strong> +250 788 123 459</p>
-            </div>
-
-            <div class="info-card">
-                <i class="fas fa-envelope"></i>
-                <h5>Email Us</h5>
-                <p>General Inquiries: info@ttcmuhanga.rw<br>
-                Admissions: admissions@ttcmuhanga.rw<br>
-                ECLPE: eclpe@ttcmuhanga.rw<br>
-                LE: le@ttcmuhanga.rw<br>
-                SME: sme@ttcmuhanga.rw<br>
-                SSE: sse@ttcmuhanga.rw</p>
-            </div>
-
-            <div class="info-card">
-                <i class="fas fa-clock"></i>
-                <h5>Office Hours</h5>
-                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>
-                Saturday: 9:00 AM - 12:00 PM<br>
-                Sunday: Closed<br>
-                Program-specific advising available</p>
+        <div class="contact-placeholder">
+            <i class="fas fa-phone-alt"></i>
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-clock"></i>
+            <h4 style="margin: 1rem 0; color: var(--dark-blue);">Contact Information Coming Soon</h4>
+            <p>Please check back later for our official contact details.</p>
+            <p style="margin-top: 1rem;">You can also visit our campus in Shyogwe, Muhanga for any inquiries.</p>
+            <div style="margin-top: 1.5rem;">
+                <i class="fas fa-map-marker-alt"></i> Shyogwe Sector, Muhanga District, Rwanda
             </div>
         </div>
     </section>
@@ -828,10 +1071,10 @@
             <div class="footer-section">
                 <h4>Our Programs</h4>
                 <ul>
-                    <li><a href="#">ECLPE - Early Childhood</a></li>
-                    <li><a href="#">LE - Languages Education</a></li>
-                    <li><a href="#">SME - Science & Math</a></li>
-                    <li><a href="#">SSE - Social Studies</a></li>
+                    <li><a href="#programs">ECLPE - Early Childhood</a></li>
+                    <li><a href="#programs">LE - Languages Education</a></li>
+                    <li><a href="#programs">SME - Science & Math</a></li>
+                    <li><a href="#programs">SSE - Social Studies</a></li>
                 </ul>
             </div>
 
@@ -840,17 +1083,16 @@
                 <ul>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#placement">REB Placement</a></li>
-                    <li><a href="#">Student Portal</a></li>
-                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#location">Location & Facilities</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
-                <h4>Connect With Us</h4>
+                <h4>Visit Us</h4>
                 <ul>
-                    <li><i class="fas fa-phone"></i> +250 123 456 789</li>
-                    <li><i class="fas fa-envelope"></i> info@ttcmuhanga.rw</li>
                     <li><i class="fas fa-map-marker-alt"></i> Shyogwe, Muhanga, Rwanda</li>
+                    <li><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</li>
                 </ul>
             </div>
         </div>
@@ -860,5 +1102,97 @@
             <p style="margin-top: 0.5rem;">Programs: ECLPE | LE | SME | SSE | Placed by REB</p>
         </div>
     </footer>
+
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                if (menuToggle) {
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Active link highlighting on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-links a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll to Top Button
+        const scrollBtn = document.querySelector('.scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+        
+        if (scrollBtn) {
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
