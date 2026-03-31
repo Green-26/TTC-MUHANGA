@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TTC Muhanga - Teacher Training College in Shyogwe, Muhanga District, Rwanda. Offering ECLPE, LE, SME, and SSE programs. REB placement only.">
-    <meta name="keywords" content="TTC Muhanga, Teacher Training College, Shyogwe, Muhanga, Rwanda, ECLPE, LE, SME, SSE, REB placement">
+    <meta name="description" content="TTC Muhanga - Teacher Training College in Shyogwe, Muhanga District, Rwanda. Offering ECLPE, LE, SME, and SSE programs. REB placement only. Principal: Jeanne d'Arc Mukabatesi.">
+    <meta name="keywords" content="TTC Muhanga, Teacher Training College, Shyogwe, Muhanga, Rwanda, ECLPE, LE, SME, SSE, REB placement, Jeanne d'Arc Mukabatesi">
     <meta name="author" content="TTC Muhanga">
     <title>TTC Muhanga - Teacher Training College | Shyogwe, Rwanda</title>
     <!-- Font Awesome for icons -->
@@ -193,17 +193,6 @@
             color: var(--white);
             transform: translateY(-3px);
             box-shadow: var(--shadow-hover);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--rwanda-yellow);
-            color: var(--rwanda-yellow);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--rwanda-yellow);
-            color: #333;
         }
 
         /* Quick Info Bar */
@@ -465,6 +454,35 @@
             text-align: center;
         }
 
+        /* JICA Partnership Section */
+        .partnership-section {
+            background: linear-gradient(135deg, #e8f0fe, #d4e4fa);
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .jica-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .jica-icon {
+            font-size: 4rem;
+            color: var(--rwanda-blue);
+        }
+
+        .jica-content {
+            flex: 1;
+        }
+
+        .jica-content h4 {
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
         /* Location Section */
         .location-section {
             background-color: var(--light-gray);
@@ -531,19 +549,33 @@
             margin: 1rem;
         }
 
-        /* Contact Section - No contact details */
-        .contact-placeholder {
-            background: linear-gradient(135deg, var(--light-gray), #fff);
-            padding: 3rem;
-            border-radius: 10px;
-            text-align: center;
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-top: 2rem;
         }
 
-        .contact-placeholder i {
+        /* Principal Card */
+        .principal-card {
+            background: linear-gradient(135deg, var(--rwanda-blue), var(--dark-blue));
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .principal-card i {
             font-size: 3rem;
-            color: var(--rwanda-blue);
             margin-bottom: 1rem;
+            color: var(--rwanda-yellow);
+        }
+
+        .principal-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
         /* Footer */
@@ -679,12 +711,9 @@
                 min-height: 400px;
             }
             
-            .section-title h3 {
-                font-size: 1.8rem;
-            }
-            
-            .program-summary {
-                grid-template-columns: repeat(2, 1fr) !important;
+            .jica-card {
+                flex-direction: column;
+                text-align: center;
             }
         }
         
@@ -693,16 +722,8 @@
                 grid-template-columns: 1fr;
             }
             
-            .program-summary {
-                grid-template-columns: 1fr !important;
-            }
-            
             .container {
                 padding: 2rem 1.5rem;
-            }
-            
-            .stat-item .number {
-                font-size: 1.5rem;
             }
         }
     </style>
@@ -712,6 +733,8 @@
         <div class="top-bar">
             <div class="contact-info">
                 <span><i class="fas fa-map-marker-alt"></i> Shyogwe Sector, Muhanga District, Rwanda</span>
+                <span><i class="fas fa-phone"></i> 0786 286 911</span>
+                <span><i class="fas fa-envelope"></i> ttcmuhanga@yahoo.fr</span>
             </div>
             <div class="social-icons">
                 <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -723,7 +746,7 @@
         <nav>
             <div class="logo">
                 <h1>TTC Muhanga</h1>
-                <p>Shaping Future Educators | Shyogwe, Rwanda</p>
+                <p>"Knowledge, Success and Unity" | Shyogwe, Rwanda</p>
             </div>
             <button class="menu-toggle" aria-label="Menu">
                 <i class="fas fa-bars"></i>
@@ -741,7 +764,7 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Est. 2005 • Shyogwe, Muhanga</span>
+            <span class="hero-badge">Est. 2010 • Shyogwe, Muhanga • EAR Shyogwe Diocese</span>
             <h2>Teacher Training College Muhanga</h2>
             <p>Excellence in Teacher Education • Located in the Heart of Shyogwe Sector, Muhanga District</p>
             <p style="font-size: 1.1rem; margin-bottom: 2rem;">Offering: ECLPE | LE | SME | SSE</p>
@@ -766,9 +789,9 @@
             <p>4 Specialized Options<br>ECLPE • LE • SME • SSE</p>
         </div>
         <div class="info-item">
-            <i class="fas fa-chalkboard-user"></i>
-            <h4>Training Focus</h4>
-            <p>Competence-Based<br>Curriculum</p>
+            <i class="fas fa-handshake"></i>
+            <h4>Partners</h4>
+            <p>JICA • EAR Shyogwe Diocese<br>Government of Rwanda</p>
         </div>
     </section>
 
@@ -776,14 +799,15 @@
         <div class="section-title">
             <h3>Welcome to TTC Muhanga</h3>
             <div class="underline"></div>
-            <p style="margin-top: 1rem;">Excellence in Teacher Education Since 2005</p>
+            <p style="margin-top: 1rem;">Excellence in Teacher Education Since 2010</p>
         </div>
         
         <div class="about-content">
             <div class="about-text">
                 <h4>Shaping the Future of Education in Rwanda</h4>
-                <p>Located in the serene Shyogwe sector of Muhanga district, TTC Muhanga stands as a beacon of quality teacher education in Rwanda's Southern Province. Our institution is dedicated to preparing competent, passionate, and innovative educators who will shape the next generation of Rwandan leaders.</p>
+                <p>Located in the serene Shyogwe sector of Muhanga district, TTC Muhanga stands as a beacon of quality teacher education in Rwanda's Southern Province. Established in 2010, our institution is a <strong>government-aided school</strong> working in partnership with the <strong>Anglican Church of Rwanda (EAR Shyogwe Diocese)</strong>.</p>
                 <p>We offer four specialized programs: <strong>ECLPE (Early Childhood and Lower Primary Education), LE (Languages Education), SME (Science and Mathematics Education), and SSE (Social Studies and Religious Education)</strong>. Each program is designed to meet Rwanda's Competence-Based Curriculum requirements.</p>
+                <p><strong>Our Motto:</strong> "Knowledge, Success and Unity"</p>
                 <a href="#programs" class="btn" style="margin-top: 1rem;">View Our Programs</a>
             </div>
             
@@ -807,6 +831,20 @@
                     <i class="fas fa-trophy"></i>
                     <div class="number">98%</div>
                     <p>Graduate Employment</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- JICA Partnership Section -->
+        <div class="partnership-section">
+            <div class="jica-card">
+                <div class="jica-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="jica-content">
+                    <h4><i class="fas fa-globe"></i> International Partnership: JICA</h4>
+                    <p>TTC Muhanga proudly partners with the <strong>Japan International Cooperation Agency (JICA)</strong>. Since 2006, JICA volunteers have supported science and mathematics education, established ICT labs, and provided high-speed internet. In February 2026, JICA celebrated its 20th anniversary at our campus with over 800 attendees.</p>
+                    <p style="margin-top: 0.5rem;"><em>"With Ms. Kuwano Izumi, every experiment was fascinating. She taught us that science is not just about chemicals and formulas, but also about hard work, collaboration, and perseverance."</em> — Elissa Niyonkuru, TTC Muhanga student</p>
                 </div>
             </div>
         </div>
@@ -917,7 +955,7 @@
             <!-- Program Summary Table -->
             <div style="margin-top: 4rem; background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow);">
                 <h4 style="text-align: center; color: var(--dark-blue); margin-bottom: 2rem;">Program Options at a Glance</h4>
-                <div class="program-summary" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
                     <div style="padding: 1rem; background: linear-gradient(135deg, #f5f5f5, #fff); border-radius: 8px;">
                         <strong style="color: var(--rwanda-blue); font-size: 1.2rem;">ECLPE</strong>
                         <p style="font-size: 0.9rem; margin-top: 0.5rem;">Early Childhood & Lower Primary</p>
@@ -958,25 +996,21 @@
                 <i class="fas fa-chalkboard-user"></i>
                 <h5>ECLPE Placement</h5>
                 <p>Students interested in Early Childhood & Lower Primary Education are placed by REB based on their O-Level results and career preferences.</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: O-Level with interest in child development</p>
             </div>
             <div class="placement-card">
                 <i class="fas fa-language"></i>
                 <h5>LE Placement</h5>
                 <p>Languages Education candidates are selected by REB based on language performance and national placement criteria.</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Strong performance in Languages</p>
             </div>
             <div class="placement-card">
                 <i class="fas fa-flask"></i>
                 <h5>SME Placement</h5>
                 <p>Science & Mathematics candidates are placed by REB based on strong performance in Sciences and Mathematics.</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Good grades in Sciences & Mathematics</p>
             </div>
             <div class="placement-card">
                 <i class="fas fa-globe-africa"></i>
                 <h5>SSE Placement</h5>
                 <p>Social Studies & Religious Education candidates are placed by REB based on performance in Humanities and Social Sciences.</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Minimum Requirement: Interest in Social Sciences & History</p>
             </div>
         </div>
 
@@ -984,7 +1018,7 @@
             <i class="fas fa-envelope-open-text" style="font-size: 2rem; margin-bottom: 1rem; display: block;"></i>
             <h4>Placed Students - Welcome to TTC Muhanga!</h4>
             <p>If you have been placed by REB to TTC Muhanga, please contact our administration for enrollment information and reporting dates.</p>
-            <p style="margin-top: 1rem;"><i class="fas fa-building"></i> Visit our campus in Shyogwe for more information</p>
+            <p style="margin-top: 1rem;"><i class="fas fa-phone"></i> Call: 0786 286 911 | <i class="fas fa-envelope"></i> Email: ttcmuhanga@yahoo.fr</p>
         </div>
     </section>
 
@@ -1001,16 +1035,16 @@
                     <i class="fas fa-map-pin"></i>
                     <h5>Physical Address</h5>
                     <p>TTC Muhanga<br>
-                    Shyogwe Sector, Muhanga District<br>
-                    Southern Province, Rwanda<br>
+                    Mubuga Cell, Shyogwe Sector<br>
+                    Muhanga District, Southern Province, Rwanda<br>
                     P.O. Box 45, Muhanga</p>
                 </div>
 
                 <div class="info-card">
                     <i class="fas fa-directions"></i>
                     <h5>Getting Here</h5>
-                    <p>Located 5km from Muhanga town center<br>
-                    Accessible via the main Kigali-Huye highway<br>
+                    <p>Located 4km from the main road<br>
+                    8km from Muhanga District office<br>
                     45 minutes from Kigali City<br>
                     Regular bus services available</p>
                 </div>
@@ -1018,11 +1052,11 @@
                 <div class="info-card">
                     <i class="fas fa-university"></i>
                     <h5>Campus Facilities</h5>
-                    <p>Modern classrooms & libraries<br>
+                    <p>12 Classrooms • Computer Lab • Library<br>
                     Science laboratories (SME program)<br>
                     Language labs (LE program)<br>
                     Demonstration school (ECLPE practice)<br>
-                    Student accommodation</p>
+                    Student accommodation (2 girls, 1 boys dormitory)</p>
                 </div>
             </div>
 
@@ -1032,8 +1066,7 @@
                     <div class="map-card">
                         <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--rwanda-blue); margin-bottom: 1rem;"></i>
                         <h4>TTC Muhanga Campus</h4>
-                        <p>Shyogwe Sector, Muhanga District, Rwanda</p>
-                        <p><strong>Coordinates:</strong> 2.080° S, 29.760° E</p>
+                        <p>Mubuga Cell, Shyogwe Sector, Muhanga District, Rwanda</p>
                         <a href="https://maps.google.com/?q=Shyogwe+Muhanga+Rwanda" target="_blank" rel="noopener noreferrer" class="btn" style="margin-top: 1rem;">Open in Google Maps</a>
                     </div>
                 </div>
@@ -1045,18 +1078,40 @@
         <div class="section-title">
             <h3>Get In Touch</h3>
             <div class="underline"></div>
-            <p style="margin-top: 1rem;">Visit Us at Our Campus</p>
+            <p style="margin-top: 1rem;">Contact Us for Any Inquiries</p>
         </div>
 
-        <div class="contact-placeholder">
-            <i class="fas fa-phone-alt"></i>
-            <i class="fas fa-envelope"></i>
-            <i class="fas fa-clock"></i>
-            <h4 style="margin: 1rem 0; color: var(--dark-blue);">Contact Information Coming Soon</h4>
-            <p>Please check back later for our official contact details.</p>
-            <p style="margin-top: 1rem;">You can also visit our campus in Shyogwe, Muhanga for any inquiries.</p>
-            <div style="margin-top: 1.5rem;">
-                <i class="fas fa-map-marker-alt"></i> Shyogwe Sector, Muhanga District, Rwanda
+        <!-- Principal Card -->
+        <div class="principal-card">
+            <i class="fas fa-user-graduate"></i>
+            <h4>Principal: Jeanne d'Arc Mukabatesi</h4>
+            <p>Leading TTC Muhanga with dedication to excellence in teacher education</p>
+            <p style="margin-top: 0.5rem;"><i class="fas fa-phone"></i> +250 788 598 705 (Principal's Line)</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="info-card">
+                <i class="fas fa-phone-alt"></i>
+                <h5>Call Us</h5>
+                <p><strong>General Line:</strong> 0786 286 911<br>
+                <strong>Principal's Line:</strong> +250 788 598 705<br>
+                <strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h5>Email Us</h5>
+                <p><strong>Official Email:</strong> ttcmuhanga@yahoo.fr<br>
+                For inquiries about programs, admissions, or general information.</p>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-building"></i>
+                <h5>Visit Us</h5>
+                <p><strong>TTC Muhanga</strong><br>
+                Mubuga Cell, Shyogwe Sector<br>
+                Muhanga District, Southern Province<br>
+                Rwanda</p>
             </div>
         </div>
     </section>
@@ -1065,7 +1120,9 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>TTC Muhanga</h4>
-                <p>Shaping Future Educators in the Heart of Muhanga District, Rwanda. Offering ECLPE, LE, SME, and SSE programs since 2005.</p>
+                <p>"Knowledge, Success and Unity"<br>
+                Shaping Future Educators in the Heart of Muhanga District, Rwanda. Offering ECLPE, LE, SME, and SSE programs since 2010.</p>
+                <p style="margin-top: 0.5rem;">In partnership with EAR Shyogwe Diocese & JICA</p>
             </div>
 
             <div class="footer-section">
@@ -1089,10 +1146,11 @@
             </div>
 
             <div class="footer-section">
-                <h4>Visit Us</h4>
+                <h4>Contact Info</h4>
                 <ul>
+                    <li><i class="fas fa-phone"></i> 0786 286 911</li>
+                    <li><i class="fas fa-envelope"></i> ttcmuhanga@yahoo.fr</li>
                     <li><i class="fas fa-map-marker-alt"></i> Shyogwe, Muhanga, Rwanda</li>
-                    <li><i class="fas fa-clock"></i> Monday - Friday: 8:00 AM - 5:00 PM</li>
                 </ul>
             </div>
         </div>
@@ -1100,6 +1158,7 @@
         <div class="copyright">
             <p>&copy; 2024 TTC Muhanga. All rights reserved. | Shyogwe Sector, Muhanga District, Rwanda</p>
             <p style="margin-top: 0.5rem;">Programs: ECLPE | LE | SME | SSE | Placed by REB</p>
+            <p style="margin-top: 0.5rem;">Principal: Jeanne d'Arc Mukabatesi</p>
         </div>
     </footer>
 
