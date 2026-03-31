@@ -1,0 +1,11 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Specify the sitemap location
+Sitemap: https://www.ttcmuhanga.rw/sitemap.xml
+
+# Disallow crawling of any admin areas (if they exist in future)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
