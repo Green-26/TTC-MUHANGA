@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TTC Muhanga - Africa's Leading Teacher Training College with AI-Powered Guidance System">
-    <meta name="keywords" content="TTC Muhanga, Teacher Training, Rwanda, ECLPE, LE, SME, SSE, Chrisostom AI">
+    <meta name="description" content="TTC Muhanga - Teacher Training College in Rwanda with quality education programs">
+    <meta name="keywords" content="TTC Muhanga, Teacher Training, Rwanda, ECLPE, LE, SME, SSE">
     <meta name="author" content="TTC Muhanga">
     <meta name="robots" content="index, follow">
-    <title>TTC Muhanga | Excellence in Teacher Education | Chrisostom AI Guide</title>
+    <title>TTC Muhanga | Teacher Training College</title>
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -18,8 +18,8 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts - Premium Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://green-26.github.io/TTC-MUHANGA/">
@@ -28,142 +28,107 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 3D Background Canvas -->
-    <div id="canvas-bg"></div>
-    
     <!-- Header Navigation -->
-    <header class="header-premium">
-        <div class="top-bar-premium">
-            <div class="contact-info-premium">
+    <header class="header">
+        <div class="top-bar">
+            <div class="contact-info">
                 <span class="contact-item"><i class="fas fa-map-marker-alt"></i> Shyogwe, Rwanda</span>
                 <span class="contact-item"><i class="fas fa-phone"></i> 0786 286 911</span>
                 <span class="contact-item"><i class="fas fa-envelope"></i> ttcmuhanga@yahoo.fr</span>
             </div>
-            <div class="social-icons-premium">
-                <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
-            </div>
         </div>
         
-        <nav class="nav-premium">
-            <div class="logo-premium">
-                <h1>🎓 TTC Muhanga</h1>
-                <p>"Knowledge, Success & Unity" | Est. 2010</p>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>TTC Muhanga</h1>
+                    <p>"Knowledge, Success & Unity"</p>
+                </div>
+                <button class="menu-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#campus">Campus</a></li>
+                    <li><a href="#news">News & Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <button class="menu-toggle-premium" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links-premium">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#campus">Campus</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#" class="ai-nav-btn" onclick="openChrisostom(event)">💬 Ask Chrisostom</a></li>
-            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section with 3D Animation -->
-    <section id="home" class="hero-premium">
-        <div class="hero-particles"></div>
-        <div class="hero-content-premium">
-            <span class="hero-badge-premium">🌟 Africa's Premier Teacher Training Institute</span>
-            <h2 class="hero-title-premium">Shaping Future Educators<br><span class="gradient-text">Excellence Through Innovation</span></h2>
-            <p class="hero-subtitle-premium">Transform your teaching journey with world-class education programs, cutting-edge facilities, and AI-powered guidance from Chrisostom</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Shaping Future Educators</h2>
+            <p>Excellence Through Quality Teacher Training Since 2010</p>
             <div class="hero-buttons">
                 <button class="btn-primary" onclick="document.getElementById('programs').scrollIntoView({behavior: 'smooth'})">Explore Programs</button>
-                <button class="btn-secondary" onclick="openChrisostom()">Talk to Chrisostom 🤖</button>
-            </div>
-        </div>
-        <div class="floating-cards">
-            <div class="float-card" style="--delay: 0s">
-                <i class="fas fa-graduation-cap"></i>
-                <p>2500+ Alumni</p>
-            </div>
-            <div class="float-card" style="--delay: 0.3s">
-                <i class="fas fa-book"></i>
-                <p>4 Programs</p>
-            </div>
-            <div class="float-card" style="--delay: 0.6s">
-                <i class="fas fa-users"></i>
-                <p>45+ Lecturers</p>
-            </div>
-            <div class="float-card" style="--delay: 0.9s">
-                <i class="fas fa-trophy"></i>
-                <p>98% Employment</p>
+                <button class="btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
             </div>
         </div>
     </section>
 
-    <!-- Quick Stats Bar -->
-    <section class="stats-bar-premium">
-        <div class="stat-box">
-            <h3 class="stat-number">2500+</h3>
-            <p class="stat-label">Successful Alumni</p>
-        </div>
-        <div class="stat-box">
-            <h3 class="stat-number">45+</h3>
-            <p class="stat-label">Expert Lecturers</p>
-        </div>
-        <div class="stat-box">
-            <h3 class="stat-number">4</h3>
-            <p class="stat-label">Specialized Programs</p>
-        </div>
-        <div class="stat-box">
-            <h3 class="stat-number">98%</h3>
-            <p class="stat-label">Graduate Employment</p>
+    <!-- Quick Stats -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3>2500+</h3>
+                <p>Successful Alumni</p>
+            </div>
+            <div class="stat-box">
+                <h3>45+</h3>
+                <p>Expert Lecturers</p>
+            </div>
+            <div class="stat-box">
+                <h3>4</h3>
+                <p>Specialized Programs</p>
+            </div>
+            <div class="stat-box">
+                <h3>98%</h3>
+                <p>Graduate Employment</p>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-premium">
-        <div class="container-premium">
-            <div class="about-header">
-                <h2 class="section-title-premium">About TTC Muhanga</h2>
-                <p class="section-subtitle-premium">Leading Excellence in Teacher Education Since 2010</p>
-                <div class="title-underline"></div>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About TTC Muhanga</h2>
+                <p>Leading Excellence in Teacher Education</p>
             </div>
             
-            <div class="about-grid">
-                <div class="about-text-box">
+            <div class="about-content">
+                <div class="about-text">
                     <h3>Welcome to Excellence</h3>
-                    <p>Established in 2010, TTC Muhanga stands as a beacon of quality teacher education in Rwanda's Southern Province. Located in the serene Shyogwe sector, our institution combines tradition with innovation to produce world-class educators.</p>
-                    <p>Our motto, "Knowledge, Success and Unity," guides every aspect of our operation. We're committed to preparing teachers who will transform Rwanda's educational landscape through competence, dedication, and passion.</p>
+                    <p>Established in 2010, TTC Muhanga stands as a beacon of quality teacher education in Rwanda's Southern Province. Located in the serene Shyogwe sector, our institution combines traditional teaching excellence with modern pedagogical approaches.</p>
+                    <p>Our motto, "Knowledge, Success and Unity," guides every aspect of our operation. We are committed to preparing teachers who will transform Rwanda's educational landscape through dedication, innovation, and service.</p>
                     <p>With partnerships including JICA and EAR Shyogwe Diocese, we offer international standards of education combined with Rwandan values and cultural excellence.</p>
-                    <button class="btn-primary" onclick="openChrisostom()">Have Questions? Ask Chrisostom</button>
                 </div>
                 
                 <div class="about-features">
-                    <div class="feature-card-premium">
-                        <div class="feature-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
                         <h4>World-Class Faculty</h4>
                         <p>45+ qualified lecturers with international credentials</p>
                     </div>
-                    <div class="feature-card-premium">
-                        <div class="feature-icon">
-                            <i class="fas fa-flask"></i>
-                        </div>
-                        <h4>Modern Labs & Facilities</h4>
-                        <p>State-of-the-art science labs, language centers, and IT infrastructure</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h4>Modern Facilities</h4>
+                        <p>State-of-the-art science labs and IT infrastructure</p>
                     </div>
-                    <div class="feature-card-premium">
-                        <div class="feature-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
                         <h4>International Partnerships</h4>
                         <p>JICA collaboration for science education excellence</p>
                     </div>
-                    <div class="feature-card-premium">
-                        <div class="feature-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h4>AI-Powered Guidance</h4>
-                        <p>Chrisostom AI assistant for 24/7 student support</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h4>Quality Education</h4>
+                        <p>Comprehensive teacher training programs</p>
                     </div>
                 </div>
             </div>
@@ -171,107 +136,102 @@
     </section>
 
     <!-- Programs Section -->
-    <section id="programs" class="programs-premium">
-        <div class="container-premium">
-            <div class="programs-header">
-                <h2 class="section-title-premium">Our Programs</h2>
-                <p class="section-subtitle-premium">Four Specialized Pathways to Excellence</p>
-                <div class="title-underline"></div>
+    <section id="programs" class="programs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Programs</h2>
+                <p>Four Specialized Pathways to Educational Excellence</p>
             </div>
 
-            <div class="programs-grid-premium">
+            <div class="programs-grid">
                 <!-- ECLPE Program -->
-                <div class="program-card-premium" data-program="ECLPE">
-                    <div class="program-header-premium eclpe-header">
-                        <div class="program-icon">🧒</div>
+                <div class="program-card">
+                    <div class="program-header eclpe-header">
+                        <div class="program-emoji">🧒</div>
                         <h3>ECLPE</h3>
-                        <span class="program-level">A1 Level</span>
                     </div>
-                    <div class="program-body-premium">
-                        <h4>Early Childhood & Lower Primary</h4>
+                    <div class="program-body">
+                        <h4>Early Childhood & Lower Primary Education</h4>
                         <p class="program-desc">Train young minds with play-based learning and child-centered pedagogy</p>
                         <ul class="program-features">
-                            <li><i class="fas fa-check-circle"></i> Child Development Psychology</li>
-                            <li><i class="fas fa-check-circle"></i> Play-Based Learning Methods</li>
-                            <li><i class="fas fa-check-circle"></i> Early Literacy & Numeracy</li>
-                            <li><i class="fas fa-check-circle"></i> Classroom Management</li>
-                            <li><i class="fas fa-check-circle"></i> Child Health & Safety</li>
+                            <li>Child Development Psychology</li>
+                            <li>Play-Based Learning Methods</li>
+                            <li>Early Literacy & Numeracy</li>
+                            <li>Classroom Management</li>
+                            <li>Child Health & Safety</li>
                         </ul>
                         <div class="program-meta">
-                            <span class="meta-badge">3 Years</span>
-                            <span class="meta-badge">Practicum Intensive</span>
+                            <span class="meta-badge">3 Years Duration</span>
+                            <span class="meta-badge">A1 Level</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- LE Program -->
-                <div class="program-card-premium" data-program="LE">
-                    <div class="program-header-premium le-header">
-                        <div class="program-icon">📚</div>
+                <div class="program-card">
+                    <div class="program-header le-header">
+                        <div class="program-emoji">📚</div>
                         <h3>LE</h3>
-                        <span class="program-level">A1 Level</span>
                     </div>
-                    <div class="program-body-premium">
+                    <div class="program-body">
                         <h4>Languages Education</h4>
                         <p class="program-desc">Master multilingual instruction for Kinyarwanda, English, and French</p>
                         <ul class="program-features">
-                            <li><i class="fas fa-check-circle"></i> Advanced Linguistics</li>
-                            <li><i class="fas fa-check-circle"></i> Language Teaching Methodology</li>
-                            <li><i class="fas fa-check-circle"></i> Literature & Culture</li>
-                            <li><i class="fas fa-check-circle"></i> Translation & Interpretation</li>
-                            <li><i class="fas fa-check-circle"></i> Language Assessment</li>
+                            <li>Advanced Linguistics</li>
+                            <li>Language Teaching Methodology</li>
+                            <li>Literature & Culture</li>
+                            <li>Translation & Interpretation</li>
+                            <li>Language Assessment</li>
                         </ul>
                         <div class="program-meta">
-                            <span class="meta-badge">3 Years</span>
-                            <span class="meta-badge">Language Labs</span>
+                            <span class="meta-badge">3 Years Duration</span>
+                            <span class="meta-badge">A1 Level</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- SME Program -->
-                <div class="program-card-premium" data-program="SME">
-                    <div class="program-header-premium sme-header">
-                        <div class="program-icon">🔬</div>
+                <div class="program-card">
+                    <div class="program-header sme-header">
+                        <div class="program-emoji">🔬</div>
                         <h3>SME</h3>
-                        <span class="program-level">A1 Level</span>
                     </div>
-                    <div class="program-body-premium">
-                        <h4>Science & Mathematics</h4>
+                    <div class="program-body">
+                        <h4>Science & Mathematics Education</h4>
                         <p class="program-desc">Develop skilled educators in STEM with hands-on laboratory experience</p>
                         <ul class="program-features">
-                            <li><i class="fas fa-check-circle"></i> Advanced Mathematics & Statistics</li>
-                            <li><i class="fas fa-check-circle"></i> Physics & Chemistry</li>
-                            <li><i class="fas fa-check-circle"></i> Biology & Environmental Science</li>
-                            <li><i class="fas fa-check-circle"></i> ICT in Education</li>
-                            <li><i class="fas fa-check-circle"></i> Laboratory Management</li>
+                            <li>Advanced Mathematics & Statistics</li>
+                            <li>Physics & Chemistry</li>
+                            <li>Biology & Environmental Science</li>
+                            <li>ICT in Education</li>
+                            <li>Laboratory Management</li>
                         </ul>
                         <div class="program-meta">
-                            <span class="meta-badge">3 Years</span>
-                            <span class="meta-badge">Lab Intensive</span>
+                            <span class="meta-badge">3 Years Duration</span>
+                            <span class="meta-badge">A1 Level</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- SSE Program -->
-                <div class="program-card-premium" data-program="SSE">
-                    <div class="program-header-premium sse-header">
-                        <div class="program-icon">🌍</div>
+                <div class="program-card">
+                    <div class="program-header sse-header">
+                        <div class="program-emoji">🌍</div>
                         <h3>SSE</h3>
-                        <span class="program-level">A1 Level</span>
                     </div>
-                    <div class="program-body-premium">
-                        <h4>Social Studies & Religious Ed</h4>
+                    <div class="program-body">
+                        <h4>Social Studies & Religious Education</h4>
                         <p class="program-desc">Build educators who understand society, culture, ethics, and values</p>
                         <ul class="program-features">
-                            <li><i class="fas fa-check-circle"></i> History & Geography</li>
-                            <li><i class="fas fa-check-circle"></i> Civics & Ethics</li>
-                            <li><i class="fas fa-check-circle"></i> Religious Studies</li>
-                            <li><i class="fas fa-check-circle"></i> Entrepreneurship</li>
-                            <li><i class="fas fa-check-circle"></i> Peace & Values Education</li>
+                            <li>History & Geography</li>
+                            <li>Civics & Ethics</li>
+                            <li>Religious Studies</li>
+                            <li>Entrepreneurship</li>
+                            <li>Peace & Values Education</li>
                         </ul>
                         <div class="program-meta">
-                            <span class="meta-badge">3 Years</span>
-                            <span class="meta-badge">Field Studies</span>
+                            <span class="meta-badge">3 Years Duration</span>
+                            <span class="meta-badge">A1 Level</span>
                         </div>
                     </div>
                 </div>
@@ -280,68 +240,82 @@
     </section>
 
     <!-- Campus Section -->
-    <section id="campus" class="campus-premium">
-        <div class="container-premium">
-            <div class="campus-header">
-                <h2 class="section-title-premium">Our Campus</h2>
-                <p class="section-subtitle-premium">World-Class Facilities in Shyogwe, Muhanga</p>
-                <div class="title-underline"></div>
+    <section id="campus" class="campus">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Campus</h2>
+                <p>World-Class Facilities in Shyogwe</p>
             </div>
 
             <div class="facilities-grid">
                 <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
+                    <div class="facility-icon">🏫</div>
                     <h4>12 Modern Classrooms</h4>
                     <p>Spacious, well-lit learning environments with interactive boards</p>
                 </div>
                 <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-flask-vial"></i>
-                    </div>
+                    <div class="facility-icon">🔬</div>
                     <h4>Science Labs</h4>
                     <p>Fully equipped laboratories for Chemistry, Physics, and Biology</p>
                 </div>
                 <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-computer"></i>
-                    </div>
+                    <div class="facility-icon">💻</div>
                     <h4>IT Center</h4>
                     <p>Modern computer lab with high-speed internet connectivity</p>
                 </div>
                 <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
+                    <div class="facility-icon">📖</div>
                     <h4>Digital Library</h4>
                     <p>Extensive collection with online research resources</p>
                 </div>
                 <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
+                    <div class="facility-icon">🎤</div>
                     <h4>Language Labs</h4>
-                    <p>Professional language learning center with native speakers</p>
+                    <p>Professional language learning center</p>
                 </div>
                 <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-bed"></i>
-                    </div>
-                    <h4>Student Dorms</h4>
-                    <p>Comfortable accommodation: 2 girls, 1 boys dormitory</p>
+                    <div class="facility-icon">🛏️</div>
+                    <h4>Student Dormitories</h4>
+                    <p>Comfortable accommodation for male and female students</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2>News & Events</h2>
+                <p>Stay Updated with TTC Muhanga</p>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card">
+                    <h4>Admissions Open 2024/2025</h4>
+                    <p>Applications are now open for the 2024/2025 academic year. Join us and become part of our excellence tradition.</p>
+                    <span class="news-date">Recent</span>
+                </div>
+                <div class="news-card">
+                    <h4>JICA Partnership Success</h4>
+                    <p>Our collaboration with JICA continues to strengthen science education programs at TTC Muhanga.</p>
+                    <span class="news-date">Recent</span>
+                </div>
+                <div class="news-card">
+                    <h4>Student Excellence Awards</h4>
+                    <p>Celebrating outstanding achievements of our students in academics and extracurricular activities.</p>
+                    <span class="news-date">Recent</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-premium">
-        <div class="container-premium">
-            <div class="contact-header">
-                <h2 class="section-title-premium">Get In Touch</h2>
-                <p class="section-subtitle-premium">We're Here to Help You Succeed</p>
-                <div class="title-underline"></div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>We're Here to Help</p>
             </div>
 
             <div class="contact-grid">
@@ -360,24 +334,19 @@
                     <h4>Email Us</h4>
                     <p>ttcmuhanga@yahoo.fr<br>info@ttcmuhanga.edu.rw</p>
                 </div>
-                <div class="contact-box">
-                    <i class="fas fa-robot"></i>
-                    <h4>Ask Chrisostom</h4>
-                    <p>24/7 AI Support<br><button class="btn-mini" onclick="openChrisostom()">Chat Now</button></p>
-                </div>
             </div>
 
             <div class="principal-box">
-                <div class="principal-avatar">📚</div>
+                <div class="principal-icon">👩‍💼</div>
                 <h3>Principal: Jeanne d'Arc Mukabatesi</h3>
                 <p>Leading TTC Muhanga with excellence, dedication, and vision for Rwanda's educational future</p>
-                <p style="margin-top: 1rem; color: #ffd700;"><i class="fas fa-phone"></i> +250 788 598 705</p>
+                <p><i class="fas fa-phone"></i> +250 788 598 705</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-premium">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-column">
                 <h4>TTC Muhanga</h4>
@@ -399,17 +368,12 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#campus">Campus</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#" onclick="openChrisostom(event)">Chrisostom AI</a></li>
+                    <li><a href="#news">News & Events</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
+                <h4>Contact</h4>
+                <p>📞 0786 286 911<br>📧 ttcmuhanga@yahoo.fr<br>📍 Shyogwe, Rwanda</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -422,42 +386,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Chrisostom AI Chatbot Widget -->
-    <div id="chrisostom-widget" class="chrisostom-widget">
-        <div class="chrisostom-header">
-            <div class="chrisostom-title">
-                <i class="fas fa-robot"></i> <strong>Chrisostom</strong>
-                <span class="online-badge">●</span>
-            </div>
-            <button id="chrisostom-minimize" onclick="toggleChrisostomChat()">
-                <i class="fas fa-minus"></i>
-            </button>
-        </div>
-        <div class="chrisostom-chat" id="chrisostom-chat">
-            <div class="chat-messages" id="chat-messages">
-                <div class="message-ai">
-                    <div class="message-bubble ai-bubble">
-                        <p><strong>Chrisostom:</strong> 👋 Hello! I'm Chrisostom, your AI guide at TTC Muhanga. I can answer questions about our programs, campus, admissions, and help you plan your teaching career journey. What would you like to know?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="quick-responses">
-                <button class="quick-btn" onclick="sendQuickMessage('Tell me about ECLPE program')">📖 ECLPE Program</button>
-                <button class="quick-btn" onclick="sendQuickMessage('What are campus facilities?')">🏢 Campus</button>
-                <button class="quick-btn" onclick="sendQuickMessage('How do I apply?')">📝 Apply</button>
-                <button class="quick-btn" onclick="sendQuickMessage('Contact information')">📞 Contact</button>
-            </div>
-            <div class="chat-input-box">
-                <input type="text" id="chat-input" placeholder="Ask Chrisostom anything..." onkeypress="handleChatKeypress(event)">
-                <button onclick="sendChatMessage()">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
